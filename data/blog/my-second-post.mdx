@@ -1,0 +1,28 @@
+---
+title: 'Generative AI Course Notes'
+date: '2024-07-26'
+summary: 'Notes for the oracle certified generative AI professional course'
+tags: ['generative-ai', 'notes', 'AI', 'LLM']
+---
+
+### Accompanying notes for the oracle certified generative AI professional course
+
+### LLM
+
+Language Model (LM) is a probabilistic model of text - the word large refers to the # of parameters for the model with no agreed upon threshold.
+
+### LLM architectures
+
+Three main types Encoder, Decoder & Encoder-Decoder models - all are based on the foundational architecture called "Transformer" (a research paper from 2017 by eight researchers)
+
+Encoder -> models that convert sequence of words to embedding aka vector representation (model examples are BERT, MiniLM etc.)
+
+Decoder -> models that takes a sequence of words and output the next word (model examples are GPT-4, Llama etc.) - only produces a single token at a time
+
+Encoder-Decoder -> models that have a combination of encoder + decoder - where decoder has a self-referential loop to continually feed the output from the last operation to current to decode the entire input sequence
+
+### Prompt engineering
+
+the simplest way to affect the distribution over the vocabulary is to change the prompt
+
+Prompt - text provided to an LLM as input, sometimes containing instructions and or examples

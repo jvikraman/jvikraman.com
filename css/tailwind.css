@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.task-list-item::before {
+  @apply hidden;
+}
+
+.task-list-item {
+  @apply list-none;
+}
+
+.footnotes {
+  @apply mt-12 border-t border-gray-200 pt-8 dark:border-gray-700;
+}
+
+.data-footnote-backref {
+  @apply no-underline;
+}
+
+.csl-entry {
+  @apply my-5;
+}
+
+@layer base {
+  .gradient-light {
+    @apply bg-gradient-to-r from-blue-500 to-green-500 bg-clip-text text-transparent;
+  }
+
+  .gradient-tr-light {
+    @apply bg-gradient-to-tr from-blue-500 via-cyan-500 to-green-500;
+  }
+
+  .gradient-tr-light-clip {
+    @apply bg-gradient-to-tr from-teal-500 via-blue-500 to-green-500 text-transparent bg-clip-text;
+  }
+
+  .gradient-vibrant {
+    @apply bg-gradient-to-r from-violet-500 via-cyan-500 to-teal-500 bg-clip-text text-transparent;
+  }
+
+  .gradient-dark {
+    @apply bg-gradient-to-r from-violet-500 via-sky-500 to-red-500 bg-clip-text text-transparent;
+  }
+
+  .gradient-tr-dark {
+    @apply bg-gradient-to-tr from-violet-500 via-sky-500 to-red-500;
+  }
+
+  .bg-light {
+    @apply rounded bg-teal-400 px-2 py-1 transition-all duration-200;
+  }
+}
+
+/* https://stackoverflow.com/questions/61083813/how-to-avoid-internal-autofill-selected-style-to-be-applied */
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition:
+    background-color 600000s 0s,
+    color 600000s 0s;
+}
+
+.katex-display {
+  overflow: auto hidden;
+}
+
+.content-header-link {
+  opacity: 0;
+  margin-left: -24px;
+  padding-right: 4px;
+}
+
+.content-header:hover .content-header-link,
+.content-header-link:hover {
+  opacity: 1;
+}
+
+.linkicon {
+  display: inline-block;
+  vertical-align: middle;
+}

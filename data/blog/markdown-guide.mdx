@@ -1,0 +1,200 @@
+---
+title: 'Markdown essentials'
+date: '2024-07-20'
+summary: 'A quick reference to get you up to speed on markdown essentials.'
+tags: ['markdown', 'guide', 'syntax']
+---
+
+##### **A quick overview of the markdown essentials** to get you up and running with markdown. Check out the links towards the end of this guide for more markdown features and further reading.
+
+## Headers
+
+```
+Prefix h1 through h6 using # as shown below
+
+# h1
+## h2
+### h3
+#### h4
+##### h5
+###### h6
+
+(or) use = & - characters for h1 & h2 respectively
+
+h1
+=
+
+h2
+-
+```
+
+## Text manipulation
+
+```
+Italics -> wrap using * or _ character e.g., *Italic text* (or) _Italic text_
+
+Bold text -> wrap using ** or __ e.g., **bold text** (or) __bold text__
+
+Combination ->  **combining bold text and _italized text_**
+
+Strikethrough -> wrap the word using two tildes e.g., ~~strikethrough text~~
+```
+
+### Footnotes
+
+- Use `[^n]` after a word to insert a footnote - `n` is a numeric that lets you add multiple footnotes within a paragraph.
+- Then use `[^n]: <insert footnote text>` to specify the footnote content - you can use `n` to your advantage here to link individual
+  footnotes within a paragraph. See examples below.
+
+```
+Not everyone will qualify for 0% APR. [^1] Take advantage of our promotional offers! [^2]
+[^1]: Lending provided by ABC Corp
+[^2]: Promotional offers are for limited time only
+```
+
+## Horizontal rule
+
+```
+Use _ thrice to create a horizontal rule e.g., ___
+```
+
+## Unordered lists
+
+Prefix list items using \* or - character. Use a single tab or indent to create a sub item.
+
+```
+* Item 1
+* Item 2
+  * sub item a
+  * sub item b
+
+(or)
+
+- Item 1
+- Item 2
+  - sub item a
+  - sub item b
+```
+
+### Ordered lists
+
+Prefix list items using numbers (both sequential and non-sequential will work) Use double tabs or indents to create sub items.
+
+```
+1. Item 1
+  * sub item a
+  * sub item b
+2. Item 2
+3. Item 3
+
+(or)
+
+1. Item 1
+  * sub item a
+  * sub item b
+1. Item 2
+1. Item 3
+```
+
+### Task lists
+
+An ordered or unordered list can be turned to a task list by adding one of the following patterns to the list item:
+
+- `[ ]` for an incomplete or pending item and
+- `[x]` for a completed item
+
+```
+- [x] Mow the lawn
+- [x] Do the dishes
+- [x] Wash car
+- [ ] Hit the gym
+```
+
+### Blockquotes
+
+Prefix blockquotes with > character. Use > twice in succession to create a blockquote within blockquote.
+
+```
+> this is a blockquote
+>> this is a blockquote within a blockquote
+```
+
+### Hyperlinks
+
+Use the full URL as is for a standard hyperlink. To use custom text with the hyperlink, wrap the custom text within [ ] and the
+actual URL within ( )
+
+```
+Standard hyperlink -> http://www.google.com
+Custom hyperlink -> [visit google](http://www.google.com)
+```
+
+### Images
+
+```
+![Alt text for image](image url)
+e.g., ![placeholder image of size 600x400](https://placehold.co/600x400)
+```
+
+### Escape sequences
+
+Use backlash to escape special characters. For example, asterisk is a special character used for a variety of operations like
+making text bold, ordering lists etc. So, how do you render the asterisk character itself in markdown?
+
+```
+render asterisk in markdown via escape sequence -> how do i render \* character?
+
+\ escape sequence works with most of the special characters like \ ` * _ { } [ ] ( ) # + - . !
+```
+
+### Code blocks
+
+Wrap code blocks using backticks e.g., \`alert('hello there!')`
+
+For a code block spanning multiple lines, use fenced code blocks by wrapping the code block using three backticks (or) tilde
+character. You cannot mix ` and ~ together in the code block - use just one.
+
+````
+``` or ~~~
+function alert(name) {
+  alert(`Hello ${name}. Nice to meet you!`);
+}
+``` or ~~~
+````
+
+Specify the language name and if required, a filename within code blocks for syntax highlighting. Notice how both
+the functions only differ in syntax highlighting.
+
+```js:greet.js
+function alert(name) {
+  alert(`Hello ${name}. Nice to meet you!`)
+}
+```
+
+### Tables
+
+- Use - character to separate table head from table body
+- Use | character to separate table columns
+- Use : along with - character to align table columns
+  - e.g., center align column --> :----:
+  - right align column --> ----:
+
+```
+| Item  | Qty | Price |
+| ----- | :-: | ----: |
+| Bread |  2  | $4.50 |
+| Milk  |  1  | $3.99 |
+| Eggs  |  3  | $5.25 |
+```
+
+| Item  | Qty | Price |
+| ----- | :-: | ----: |
+| Bread |  2  | $4.50 |
+| Milk  |  1  | $3.99 |
+| Eggs  |  3  | $5.25 |
+
+### Further references and links
+
+- [Writing on Github using Markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+- [Github flavored markdown spec](https://github.github.com/gfm/)
+- [Daring fireball's markdown guide](https://daringfireball.net/projects/markdown/)
