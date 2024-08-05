@@ -38,7 +38,7 @@ export default function Home({ posts }) {
                     <div className="space-y-5 xl:col-span-3">
                       <div className="space-y-6">
                         <div>
-                          <h2 className="gradient-light hover:opacity-90 hover:dark:opacity-90 dark:gradient-dark text-2xl font-bold leading-8 tracking-tight">
+                          <h2 className="gradient-light dark:gradient-dark text-2xl font-bold leading-8 tracking-tight hover:opacity-90 hover:dark:opacity-90">
                             <Link href={`/blog/${slug}`}>{title}</Link>
                           </h2>
                           <div className="flex flex-wrap">

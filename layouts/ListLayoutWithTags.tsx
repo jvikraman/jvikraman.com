@@ -137,7 +137,7 @@ export default function ListLayoutWithTags({
                           <h2 className="text-2xl font-bold leading-8 tracking-tight">
                             <Link
                               href={`/${path}`}
-                              className="gradient-tr-light-clip hover:opacity-90  dark:hover:opacity-90  dark:gradient-dark"
+                              className="gradient-tr-light-clip dark:gradient-dark  hover:opacity-90  dark:hover:opacity-90"
                             >
                               {title}
                             </Link>
