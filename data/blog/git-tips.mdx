@@ -1,0 +1,136 @@
+---
+title: 'Git Tips & Tricks'
+date: '2024-08-05'
+summary: 'Git related tips & tricks you often reach out for in your day to day.'
+tags: ['git', 'tips', 'tricks']
+---
+
+Below are some common `Git` related operations you often do on a day to day basis.
+
+### Rename branch
+
+```shell
+# rename `master` branch to `main`
+$ git branch -m master main
+```
+
+### Delete branch
+
+```shell
+# delete local `develop` branch
+$ git checkout <some_other_branch>
+$ git branch -D develop
+
+# delete `develop` branch in remote
+$ git push origin --delete develop
+```
+
+### Clear current git and or commit history
+
+```shell
+# remove the hidden `.git` folder within the repo first
+$ rm -rf .git
+
+# then initialize git using the current state while inside the repo
+$ git init
+$ add .
+$ git commit -m "initial commit"
+```
+
+### Check current origin/remote
+
+```shell
+$ git remote -v
+```
+
+### Add/modify origin/remote
+
+```shell
+# add new `remote/origin` for a repo
+$ git remote add origin <remote git repo url - either https or ssh>
+
+# modify the current `remote/origin` for a repo
+$ git remote set-url origin <remote git repo url - either https or ssh>
+```
+
+### Set remote upstream branch
+
+```shell
+# set a remote upstream branch for the local `main` branch & push local changes to remote `main` branch
+$ git push -u origin main
+
+# you can also unset an existing upstream connection
+$ git branch --unset-upstream
+```
+
+### Stash local changes including untracked files
+
+```shell
+# stash local changes including any untracked files
+$ git stash save -u "<optional message>"
+
+# apply the most recent stash
+$ git stash apply
+
+# apply the most recent stash to local and remove the stash from history
+$ git stash pop
+
+# apply a specific stash from history to local
+# replace `n` with a number to go from most recent to oldest - e.g., 0, 1, 2 etc.
+$ git stash apply stash@{n}
+```
+
+### Condensed git log
+
+```shell
+$ git log --one-line
+```
+
+### Reset last `n` commits
+```shell
+# replace `n` with the number of commits you want to go back to
+# `reset HEAD` with reset and preserve the mods on your local
+# whereas `reset HEAD~n --hard` will reset & remove/delete the mods on your local
+$ git reset HEAD~n
+```
+
+### Rebase local branch with another branch
+
+```shell
+# make sure your local target branch is up-to-date with its remote counterpart
+# also make sure to stash away any local mods before the rebase
+$ git checkout <branch where you like to do the rebase - e.g., feature-a>
+$ git rebase <target branch you like to rebase with the current branch - e.g., develop>
+```
+
+### Merge local branch with another branch
+
+```shell
+$ git checkout <branch you like to merge on to - e.g., develop>
+$ git merge <branch you like to merge with - e.g., feature-a>
+```
+
+### Force-push local changes to upstream
+
+```shell
+$ git push --force-with-lease
+```
+
+### Discard local changes
+
+```shell
+# discard all local changes in the repo
+$ git checkout .
+
+# discard specific changes
+$ git checkout <relative path to a specific file - e.g. components/button.jsx>
+```
+
+### Workaround for divergent branch situation
+
+It is often easier to delete the current local branch where you got the divergent branch issue and recreate it locally using following commands.
+
+```shell
+$ git branch -D <divergent branch>
+$ git checkout <deleted branch>
+```
