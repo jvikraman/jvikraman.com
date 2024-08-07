@@ -22,17 +22,21 @@
   @apply my-5;
 }
 
-@layer base {
-  .gradient-light {
-    @apply bg-gradient-to-r from-blue-500 to-green-500 bg-clip-text text-transparent;
-  }
-
+@layer utilities {
   .gradient-tr-light {
     @apply bg-gradient-to-tr from-blue-500 via-cyan-500 to-green-500;
   }
 
   .gradient-tr-light-clip {
-    @apply bg-gradient-to-tr from-teal-500 via-blue-500 to-green-500 text-transparent bg-clip-text;
+    @apply bg-gradient-to-tr from-teal-500 via-blue-500 to-green-500 bg-clip-text text-transparent;
+  }
+
+  .gradient-tr-dark {
+    @apply bg-gradient-to-tr from-violet-500 via-sky-500 to-red-500;
+  }
+
+  .gradient-light {
+    @apply bg-gradient-to-r from-blue-500 to-green-500 bg-clip-text text-transparent;
   }
 
   .gradient-vibrant {
@@ -41,10 +45,6 @@
 
   .gradient-dark {
     @apply bg-gradient-to-r from-violet-500 via-sky-500 to-red-500 bg-clip-text text-transparent;
-  }
-
-  .gradient-tr-dark {
-    @apply bg-gradient-to-tr from-violet-500 via-sky-500 to-red-500;
   }
 
   .bg-light {
