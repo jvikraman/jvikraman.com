@@ -13,7 +13,7 @@ const Header = () => {
         <Link href="/" aria-label={siteMetadata.headerTitle}>
           <div className="flex items-center justify-between">
             <div className="mr-3">
-              <Logo className="h-10 w-10 sm:h-16 sm:w-16 md:h-20 md:w-20 fill-blue-400 dark:fill-sky-400 hover:opacity-70 dark:hover:opacity-90" />
+              <Logo className="h-10 w-10 fill-blue-400 hover:opacity-70 dark:fill-sky-400 dark:hover:opacity-90 sm:h-16 sm:w-16 md:h-20 md:w-20" />
             </div>
             {typeof siteMetadata.headerTitle === 'string' ? (
               <div className="hover:gradient-light dark:hover:gradient-dark hidden h-10 text-3xl font-bold sm:block">
@@ -25,7 +25,7 @@ const Header = () => {
           </div>
         </Link>
       </div>
-      <div className="flex items-center space-x-4 leading-5 sm:space-x-6">
+      <div className="flex items-center space-x-4 text-lg leading-5 sm:space-x-6">
         {headerNavLinks
           .filter((link) => link.href !== '/')
           .map((link) => (

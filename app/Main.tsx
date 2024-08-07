@@ -14,7 +14,7 @@ export default function Home({ posts }) {
           <h1 className="gradient-light dark:gradient-dark py-2 text-3xl font-extrabold leading-9 tracking-tight sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             Hi, I 'm Jegadeesh
           </h1>
-          <p className="prose text-lg leading-7 text-gray-500 dark:text-gray-400">
+          <p className="prose text-lg leading-7 text-gray-600 dark:text-gray-300">
             Welcome to my personal site. I 'm a Sr. Full Stack Engineer and I maintain this site to
             share my thoughts about technology and other interests. Checkout the{' '}
             <Link href={`/about`}>About</Link>
@@ -31,14 +31,14 @@ export default function Home({ posts }) {
                   <div className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
                     <dl>
                       <dt className="sr-only">Published on</dt>
-                      <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
+                      <dd className="text-base font-medium leading-6 text-gray-600 dark:text-gray-300">
                         <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
                       </dd>
                     </dl>
                     <div className="space-y-5 xl:col-span-3">
                       <div className="space-y-6">
                         <div>
-                          <h2 className="gradient-light hover:opacity-90 hover:dark:opacity-90 dark:gradient-dark text-2xl font-bold leading-8 tracking-tight">
+                          <h2 className="gradient-light dark:gradient-dark text-2xl font-bold leading-8 tracking-tight hover:opacity-90 hover:dark:opacity-90">
                             <Link href={`/blog/${slug}`}>{title}</Link>
                           </h2>
                           <div className="flex flex-wrap">
@@ -47,7 +47,7 @@ export default function Home({ posts }) {
                             ))}
                           </div>
                         </div>
-                        <div className="prose max-w-none text-gray-500 dark:text-gray-400">
+                        <div className="prose max-w-none text-gray-600 dark:text-gray-300">
                           {summary}
                         </div>
                       </div>
