@@ -25,9 +25,9 @@ Notes from the `Oracle Certified 2024 AI Foundations Associate` certification co
 - **Supervised Learning**
 
   - classify data and or make predictions.
-  - learns relationships b/w input and output from `labeled data.`
+  - learns relationships between input and output from `labeled data.`
   - use cases include `disease detection, weather forecasting, house price prediction, stock price prediction, spam detection, sentiment analysis, credit scoring etc.`
-  - **Types/variations:**
+  - **Variations**
 
     - **Linear Regression**
       - used when the output label is `continuous` - e.g., house price predictor.
@@ -39,37 +39,37 @@ Notes from the `Oracle Certified 2024 AI Foundations Associate` certification co
         - **Binary** ➠ if prediction value is either true of false.
         - **Multi-class** ➠ for example, in sentiment analysis, prediction outputs are either positive, negative or neutral.
         - **Logistic Regression**
-          - predicts true or false instead of something continuous such as house prices.
-          - unlike linear regression, fits an `S-shaped curve called sigmoid function` to the data
+          - predicts `true or false` instead of something continuous such as house prices.
+          - unlike linear regression, fits an `S-shaped curve called sigmoid function` to the data.
 
 - **Unsupervised Learning**
 
   - type of ML that doesn't use any `labeled outputs.`
-  - understands relationships within datasets & extracts trends from data. Can also learn patterns in the data & group similar data items.
+  - understands relationships within datasets and extracts trends from data. Can also learn patterns in the data and group similar data items.
   - use cases include `detecting fradulent transactions, customer segmentation, outlier detection, targeted marketing campaigns etc.`
   - **Clustering**
     - grouping of similar data items.
     - data items are more similar within a cluster than the items outside of it.
     - data items that are not similar within a cluster are termed as `outliers`.
     - use cases include `market segmentation, outlier analysis, recommendation systems etc.`
-    - **Similarity** ➠ how close two data points are to each other - usually a value between 0 & 1.
-    - **Clustering Workflow**:
+    - **Similarity** ➠ how close two data points are to each other - usually a value between 0 and 1.
+    - **Clustering Workflow**
       - **prepare the data** ➠ remove missing values, normalize data, perform feature scaling etc.
-      - **create similarity metrics** ➠ choose similarity metrics based on nature of data & clustering algorithm used - frequently used are `euclidean, hamm, manhattan, cosine etc.`
-      - **run clustering algorithm** ➠ use the chosen similarity metrics to cluster the data - common algorithms used are `partition, hierarchical, density & distribution based.`
-      - **interpret results & adjust clustering** ➠ check quality of clustering output by verifying against expectations iteratively.
+      - **create similarity metrics** ➠ choose similarity metrics based on nature of data and clustering algorithm used - frequently used are `euclidean, hamm, manhattan, cosine etc.`
+      - **run clustering algorithm** ➠ use the chosen similarity metrics to cluster the data - common algorithms used are `partition, hierarchical, density and distribution based.`
+      - **interpret results and adjust clustering** ➠ check quality of clustering output by verifying against expectations iteratively.
 
 - **Reinforcement Learning (RL)**
 
   - type of ML that enables an agent to learn from its interactions with the environment while receiveing feedback in the form of rewards or penalties without any labeled dataset.
-  - makes decisions or choices & solves tasks by trial and error.
-  - use cases include `industrial automation, autonomous vehicles, smart devices, gaming & entertainment, healthcare etc.`
-  - **RL Terminologies**:
-    - **Agent** ➠ interacts with environment, takes actions & learns from feedback.
+  - makes decisions or choices and solves tasks by trial and error.
+  - use cases include `industrial automation, autonomous vehicles, smart devices, gaming and entertainment, healthcare etc.`
+  - **RL Terminologies**
+    - **Agent** ➠ interacts with environment, takes actions and learns from feedback.
     - **Environment** ➠ external system with which the agent interacts.
     - **State** ➠ representation of the current situation of the environment at a particular time.
     - **Action** ➠ possible moves or decisions the agent can take in each state.
-    - **Policy** ➠ strategy/mapping the agent uses to decide which action to take in a given state.
+    - **Policy** ➠ strategy the agent uses to decide which action to take in a given state.
   - **RL Training Loop**
     - goal is to find a policy that will yield a lot of rewards for the agent.
     - optimal policy is learned through training by using algorithms like `Q learning or Deep Q learning`
@@ -77,85 +77,85 @@ Notes from the `Oracle Certified 2024 AI Foundations Associate` certification co
 ### Deep Learning (DL)
 
 - subset of ML that focuses on training `Artificial Neural Networks (ANNs)` with multiple layers.
-- automatically learns & extracts intricate representations and or features from raw & complex data.
-- internal representation of data is built using extracted features & DL algorithms allow parallel processing of data leading to better scalability & performance.
-- **Types of DL algorithms/models and their use cases**:
+- automatically learns and extracts intricate representations and or features from raw and complex data.
+- internal representation of data is built using extracted features and DL algorithms allow parallel processing of data leading to better scalability and performance.
+- **Types of DL algorithms/models and their use cases**
 
-  | DL Algorithm/Models                     | Use Cases                                                                                                                                                           |
-  | :-------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-  | `Convolutional Neural Networks (CNN)`   | <p>Image classification & segmentation, object detection & facial recognition.</p><p>Detect patterns & features.</p>                                                |
-  | `Recurrent Neural Networks (RNN)`       | <p>Process sequential, time series & natural language data.</p><p>Has a feedback loop to capture hidden states to manage temporal dependencies.</p>                 |
-  | `Autoencoders`                          | <p>Unsupervised learning models used for feature extraction & dimensionality reduction.</p><p>Commonly employed in data compression & anomaly detection.</p>        |
-  | `Transformers`                          | <p>Process sequential, time series & natural language data.</p><p>Generative tasks like Question Answering (QA), text summarization & text to image generation.</p> |
-  | `Long Short-Term Memory (LSTM)`         | <p>Specialized RNN variant that can process sequential, time series & natural language data.</p><p>Can handle long-term dependencies in sequential data.</p>        |
-  | `Diffusion Models`                      | Generating images, text to image generation etc.                                                                                                                    |
-  | `Generative Adversarial Networks (GAN)` | Generating audio, images, text to image generation etc.                                                                                                             |
+  | DL Algorithm/Models                     | Use Cases                                                                                                                                                               |
+  | :-------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+  | `Convolutional Neural Networks (CNN)`   | <p>Image classification and segmentation, object detection and facial recognition.</p><p>Detect patterns and features.</p>                                              |
+  | `Recurrent Neural Networks (RNN)`       | <p>Process sequential, time series and natural language data.</p><p>Has a feedback loop to capture hidden states to manage temporal dependencies.</p>                   |
+  | `Autoencoders`                          | <p>Unsupervised learning models used for feature extraction and dimensionality reduction.</p><p>Commonly employed in data compression and anomaly detection.</p>        |
+  | `Transformers`                          | <p>Process sequential, time series and natural language data.</p><p>Generative tasks like Question Answering (QA), text summarization and text to image generation.</p> |
+  | `Long Short-Term Memory (LSTM)`         | <p>Specialized RNN variant that can process sequential, time series and natural language data.</p><p>Can handle long-term dependencies in sequential data.</p>          |
+  | `Diffusion Models`                      | Generating images, text to image generation etc.                                                                                                                        |
+  | `Generative Adversarial Networks (GAN)` | Generating audio, images, text to image generation etc.                                                                                                                 |
 
 - **Artificial Neural Network (ANN)**
 
-  - inspired by the human brain & consists of interconnected nodes called `neurons`.
-  - **Building Blocks of ANN**:
-    - **Layers** ➠ input, hidden & output layers receive inputs, transform them & produce outputs.
+  - inspired by the human brain and consists of interconnected nodes called `neurons`.
+  - **Building Blocks of ANN**
+    - **Layers** ➠ input, hidden and output layers receive inputs, transform them and produce outputs.
     - **Neurons** ➠ computational unit from an input that produces output.
     - **Weights** ➠ determines the strength of connection between the neurons.
-    - **Activation Function** ➠ works on the weighted sum of inputs to a neuron & produces an output.
+    - **Activation Function** ➠ works on the weighted sum of inputs to a neuron and produces an output.
     - **Bias** ➠ additional input to a neuron that allows a certain degree of flexibility.
   - ANNs are trained using `backpropagation algorithm`.
     - **Backpropagation algorithm** ➠ adjusting the weights of neurons based on a calculation during training to correct errors in output.
 
 - **Sequence Models**
 
-  - input data is in the form of sequences and the goal is to find patterns & make predictions.
-  - **Use Cases**:
+  - input data is in the form of sequences and the goal is to find patterns and make predictions.
+  - **Use Cases**
 
     - **Natural Language Processing (NLP)** ➠ sentiment analysis, machine translation, text generation etc.
     - **Speech Recognition** ➠ convert speech/audio to text.
     - **Music Generation** ➠ DL sequence models can create new music compositions.
     - **Gesture Recognition** ➠ sign language recognition.
-    - **Time Series Analysis** ➠ in the field of finance & weather, used to predict future values.
+    - **Time Series Analysis** ➠ in the field of finance and weather, used to predict future values.
 
-  - **Recurrent Neural Network (RNN):**
+  - **Recurrent Neural Network (RNN)**
 
     - type of sequential DL model that handles sequential data.
     - unlike `Feed Forward Neural Network (FNN)`, allows information to persist using a `feedback loop.`
     - a key feature of RNN is the ability to maintain a `hidden state/memory` that is updated after each element in the input sequence is processed.
-    - hidden state is used as the input for the network for the next time step allowing the model to capture dependencies & patterns across data spent across time.
+    - hidden state is used as the input for the network for the next time step allowing the model to capture dependencies and patterns across data spent across time.
     - RNNs do not perform well with capturing long term dependencies - due to `vanishing gradients` problem that can be addressed by using `Long Short-Term Memory (LSTM)` models.
-    - **Types of RNN:**
+    - **Types of RNN**
       - **One-to-One** ➠ similar to feed forward neural network and not suitable for sequential data.
       - **One-to-Many** ➠ provides multiple output values for one input value. Use cases includes `music or sequence generation.`
-      - **Many-to-One** ➠ provide one output value after receiving multiple input values. `e.g., sentiment analysis based on reviews.`
-      - **Many-to-Many** ➠ provides multiple output values for multiple input values. `e.g., machine translation & entity recognition.`
+      - **Many-to-One** ➠ provides one output value after receiving multiple input values. `e.g., sentiment analysis based on reviews.`
+      - **Many-to-Many** ➠ provides multiple output values for multiple input values. `e.g., machine translation and entity recognition.`
 
-  - **Long Short-Term Memory (LSTM):**
+  - **Long Short-Term Memory (LSTM)**
     - works by using a `specialized memory cell and gating mechanisms` to capture long-term dependencies in sequential data.
     - overcomes the vanishing gradients problem by `selectively remembering or forgetting information over time.`
-    - **LSTM Workflow/Components**:
+    - **LSTM Workflow**
       - **Input Processing** ➠ inputs current data point in the sequence.
-      - **Previous Memory** ➠ receives the previous hidden state values that represent what the system had remembered & forgot up to the current point in the sequence.
+      - **Previous Memory** ➠ receives the previous hidden state values that represent what the system had remembered and forgot up to the current point in the sequence.
       - **Gating Mechanism** ➠ similar to filters that control the flow of information between cells in the system.
         - **Input Gate** ➠ decides what new information from the current input should be added to the memory cell.
         - **Forget Gate** ➠ decides what information in the current memory cell should be discarded or forgotten.
         - **Output Gate** ➠ regulates how much of the current memory cell should be exposed as the output of the current step.
-      - **Updating Memory** ➠ updates the cell state by using information from both input & forget gate.
+      - **Updating Memory** ➠ updates the cell state by using information from both input and forget gate.
       - **Output Generation** ➠ LSTM uses the output to produce the current hidden state which becomes the output of the LSTM for the next time step.
 
 - **Convolutional Neural Network (CNN)**
-  - type of DL model designed to process `grid-like data like images & videos.`
-  - **CNN Layers**:
-    - **Input Layer** ➠ accepts images with height, width & depth representing RGB color channels.
+  - type of DL model designed to process `grid-like data. e.g., images and videos.`
+  - **CNN Layers**
+    - **Input Layer** ➠ accepts images with height, width and depth representing RGB color channels.
     - **Feature Extraction Layers**
-      - automatically learns & extracts relevant patterns & features from input images.
-      - **Building Blocks**:
+      - automatically learns and extracts relevant patterns and features from input images.
+      - **Building Blocks**
         - **Convolutional Layer** ➠ applies convolutional operations to the input image using small filters called `kernels`.
-        - **Activation Function** ➠ allows the network to learn more complex & non-linear relationships in the data.
-        - **Pooling Layer** ➠ helps to reduce the computational complexity & spatial dimensions of the feature maps generated by the convolutional layers.
+        - **Activation Function** ➠ allows the network to learn more complex and non-linear relationships in the data.
+        - **Pooling Layer** ➠ helps to reduce the computational complexity and spatial dimensions of the feature maps generated by the convolutional layers.
         - **Fully Connected Layer** ➠ responsible for making final predications or classifications based on the learned features.
         - **Softmax Layer** ➠ converts the output of the last fully connected layers to probability scores.
         - **Dropout Layer** ➠ regularization technique used to prevent overfitting in the network. Similar to that of a quality checker.
     - **Classification Layers** ➠ fully connected output layer where classification occurs.
   - **CNN Limitations**
-    - requires massive data & computations.
+    - requires massive data and computations.
     - subject to overfitting - happens with limited training data.
     - typically considered as black box models thereby difficult to interpret.
     - sensitive to small changes in the input leading to unstable predictions.
@@ -164,111 +164,111 @@ Notes from the `Oracle Certified 2024 AI Foundations Associate` certification co
     - perform pixel-level image segmentation.
     - face recognition tasks.
     - medical image diagnosis.
-    - autonomous vehicle development (identify pedestrians, traffic signs & other vehicles)
-    - analyze satellite images & remote sensing data (for tasks like land cover classification & environmental monitoring)
+    - autonomous vehicle development (identify pedestrians, traffic signs and other vehicles)
+    - analyze satellite images and remote sensing data (for tasks like land cover classification and environmental monitoring)
 
 ### OCI AI Portfolio
 
-- **AI Services:**
+- **AI Services**
 
   - **Digital Assistant**
-    - platform to create & deploy digital assistants that are AI-driven interfaces to help users accomplish a variety of tasks with natural language conversations.
-    - interacts with the user, lists what it can do, routes user's requests to skills & handles disambiguation.
+    - platform to create and deploy digital assistants that are AI-driven interfaces to help users accomplish a variety of tasks with natural language conversations.
+    - interacts with the user, lists what it can do, routes user's requests to skills and handles disambiguation.
   - **Language**
     - pretrained models trained on industry data to perform language analysis with no data science expertise required.
-    - **Pretrained Models** ➠ supports language detection, sentiment analysis & key phrase extraction.
-    - **Custom Models** ➠ named entity recognition & text classification.
+    - **Pretrained Models** ➠ supports language detection, sentiment analysis and key phrase extraction.
+    - **Custom Models** ➠ named entity recognition and text classification.
     - **Text Translation** ➠ natural machine translation is used to translate text across various languages.
   - **Vision**
-    - provides two main capabilities ➠ `image analysis & document AI`
-      - **Image analysis variations:**
-        - **Object detection** ➠ feature that detects objects inside an image using a bounding box and assign a label to each object with an accuracy percentage.
-        - **Image classification** ➠ assigns classification labels to the image by identifying the major features in the scene.
-    - both pretrained & custom models are available for use. Users can retrain the models with own unique data to fit specific needs.
+    - provides two main capabilities ➠ `image analysis and document AI`
+      - **Image Analysis Variations**
+        - **Object Detection** ➠ feature that detects objects inside an image using a bounding box and assign a label to each object with an accuracy percentage.
+        - **Image Classification** ➠ assigns classification labels to the image by identifying the major features in the scene.
+    - both pretrained and custom models are available for use. Users can retrain the models with own unique data to fit specific needs.
   - **Speech**
-    - transcribes audio & video files using DL techniques. No data science expertise required.
-    - processes data directly in object storage & generates timestamped accurate transcriptions.
-    - converts media files to readable texts & text transcriptions stored in `JSON & SRT formats.`
-    - supports english, spanish & portuguese currently and more languages on the way.
-    - batching support for multiple files in one call & fast processing (10 hrs of audio in < 10 mins)
+    - transcribes audio and video files using DL techniques. No data science expertise required.
+    - processes data directly in object storage and generates timestamped accurate transcriptions.
+    - converts media files to readable texts and text transcriptions stored in `JSON and SRT formats.`
+    - supports english, spanish and portuguese currently and more languages on the way.
+    - batching support for multiple files in one call and fast processing (10 hrs of audio in < 10 mins)
     - makes transcribed text more redable using normalization. Provides profanity filtering as well.
   - **Document Understanding (DU)**
-    - user can upload documents to detect and classify text & objects in them.
+    - user can upload documents to detect and classify text and objects in them.
     - can process individual files or batches of documents.
-    - in `Optical Character Recognition (OCR)`, DU can detect & recognize text in a document.
-    - in `text extraction` DU provides word & line-level text and the bounding box coordinates of where the text is found.
-    - in `key value extraction` DU extracts a predefined list of key-value pairs from receipts, invoices, passports & driver IDs.
-    - in `table extraction` DU extracts contents in tabular format, maintaining the row & column relationship of cells.
+    - in `optical character recognition (OCR)`, DU can detect and recognize text in a document.
+    - in `text extraction` DU provides word and line-level text and the bounding box coordinates of where the text is found.
+    - in `key value extraction` DU extracts a predefined list of key-value pairs from receipts, invoices, passports and driver IDs.
+    - in `table extraction` DU extracts contents in tabular format, maintaining the row and column relationship of cells.
     - in `document classification` DU classifies documents into different types.
 
 - **ML Services**
 
-  - **Core Principles of OCI Data Science:**
+  - **Core Principles of OCI Data Science**
 
     - **Accelerated** ➠ allow data scientists to work how they want and provide access to automated workflows, best of open-source libraries and a streamlined approach to building models.
-    - **Collaborative** ➠ enable data science teams to work together with ways to share and reproduce models in a structured & secured way for enterprise-grade results.
+    - **Collaborative** ➠ enable data science teams to work together with ways to share and reproduce models in a structured and secured way for enterprise-grade results.
     - **Enterprise-Grade** ➠ provide a fully managed platform built to meet the needs of the modern enterprise.
 
-  - **Data Science Features & Terminology:**
+  - **Data Science Features and Terminology**
     - **Projects** ➠ containers that enable data science teams to organize their work.
-    - **Notebook Sessions** ➠ provides a JupyterLab environment with pre-installed open source libraries & ability to add others.
-    - **Conda environments** ➠ open source environment & package management system created for python programs.
+    - **Notebook Sessions** ➠ provides a JupyterLab environment with pre-installed open source libraries and ability to add others.
+    - **Conda Environments** ➠ open source environment and package management system created for python programs.
     - **Acceleratd Data Science (ADS) SDK** ➠ python library to simplify the steps in data science workflow.
-    - **Models** ➠ mathematical representation of your data & business process.
-    - **Model Catalog** ➠ a place to store, track, share & manage models. Centralized & managed repository of model artifacts.
+    - **Models** ➠ mathematical representation of your data and business process.
+    - **Model Catalog** ➠ a place to store, track, share and manage models. Centralized and managed repository of model artifacts.
     - **Model Deployments** ➠ used to deploy models stored in model catalog as `HTTP endpoints` on managed infrastructure.
-    - **Jobs** ➠ used to define & run a repeatable machine learning task on fully managed infrastructure.
+    - **Jobs** ➠ used to define and run a repeatable machine learning task on fully managed infrastructure.
 
 - **AI Infrastructure Overview**
 
   - **GPU Architecture**
     - allows many processes at the same time with parallel computing.
-    - performs many computations very rapidly & crunches through extremely large datasets at tremendous speeds.
+    - performs many computations very rapidly and crunches through extremely large datasets at tremendous speeds.
 
 - **Responsible AI**
 
   - should follow applicable laws.
   - should be ethical.
-  - should be robust both from a technical & social perspective.
-  - **Cycles & Roles:**
+  - should be robust both from a technical and social perspective.
+  - **Cycles and Roles**
     - setup governance to be put in place.
-    - develop policies & procedures.
+    - develop policies and procedures.
     - ensure compliance.
-    - typical roles involved are developers, deployers & end users.
-  - **Challenges in Healthcare:**
-    - ensuring fairness & lack of bias.
-    - ensuring transparency & explain ability.
+    - typical roles involved are developers, deployers and end users.
+  - **Challenges in Healthcare**
+    - ensuring fairness and lack of bias.
+    - ensuring transparency and explain ability.
     - regular evaluation.
 
 - **OCI Generative AI Service**
 
-  - **Vector Search using Oracle Database 23ai:**
-    - simple to combine `relational & AI vector search` in single query.
+  - **Vector Search Using Oracle Database 23ai**
+    - simple to combine `relational and AI vector search` in single query.
     - efficient orchestration of Gen-AI pipelines.
     - SQL support for vector generation.
     - vector data type - dimension format can be either `INT8, FLOAT32, FLOAT64`
-    - simple vector spec - to support newer ML embedding models in the future. Schema can stay same & apps don't need to be rewritten.
-    - similarity search using SQL syntax & functions.
-      - **Vector distance function** ➠ distance between two vectors is smaller for entities that are more similar.
-      - **Supported distance functions** ➠ `cosine (default), euclidean, euclidean_squared, hamming, manhattan & dot`.
-      - **Vector search SQL** ➠ used to find the `top k` closest matches to a given query item.
-      - **Vector index syntax**
+    - simple vector spec - to support newer ML embedding models in the future. Schema can stay same and apps don't need to be rewritten.
+    - similarity search using SQL syntax and functions.
+      - **Vector Distance Function** ➠ distance between two vectors is smaller for entities that are more similar.
+      - **Supported Distance Functions** ➠ `cosine (default), euclidean, euclidean_squared, hamming, manhattan and dot`.
+      - **Vector Search SQL** ➠ used to find the `top k` closest matches to a given query item.
+      - **Vector Index Syntax**
         - similar to basic index creation. Organization for an index is based on `in-memory fitment.`
         - Use `IN MEMORY NEIGHBOR GRAPH` if the index data will fit in-memory. Else use `NEIGHBOR PARTITIONS`
         - `TARGET ACCURACY` clause is used to indicate the default accuracy the index should provide for similarity search queries.
-    - **Approximate search indexes** ➠ use the new `APPROXIMATE` keyword in the row limiting fetch clause to perform a similarity search using a vector index.
+    - **Approximate Search Indexes** ➠ use the new `APPROXIMATE` keyword in the row limiting fetch clause to perform a similarity search using a vector index.
     - database-native vector embedding generation.
 
 - **Autonomous Database Select AI**
   - simplest way to get answers about your business.
-  - use your language to query data. No need to understand where & how your data is stored to gain insights.
+  - use your language to query data. No need to understand where and how your data is stored to gain insights.
   - autonomous database manages the entire query process to produce your answer.
   - `Select AI` translates your language into Oracle SQL Language using Large Language Models (LLMs)
-  - developing apps with select AI is simple, future-enabled & secure.
-  - **Select AI workflow/steps:**
+  - developing apps with select AI is simple, future-enabled and secure.
+  - **Select AI workflow**
     - first, use one or more `select AI profiles` to choose an LLM to generate a DB query from natural language.
     - then `specify schemas, tables or views` to participate in the processing.
-  - **SQL query generation process flow:**
+  - **SQL query generation process flow**
     - **Select an AI profile** ➠ choose between different LLMs for prompt generation.
     - **Produce prompt** ➠ LLM generates prompt for the question asked.
     - **Generate SQL using LLM** ➠ LLM generates the SQL using the model.
@@ -276,5 +276,5 @@ Notes from the `Oracle Certified 2024 AI Foundations Associate` certification co
 
 ### References and Further Reading
 
-- [OCI 2024 AI Foundations Associate Certification](https://education.oracle.com/oracle-cloud-infrastructure-2024-ai-foundations-associate/pexam_1Z0-1122-24)
-- [OCI AI Foundations Course](https://mylearn.oracle.com/ou/course/oracle-cloud-infrastructure-ai-foundations/133832)
+- [OCI 2024 AI Foundations Associate Certification](https//education.oracle.com/oracle-cloud-infrastructure-2024-ai-foundations-associate/pexam_1Z0-1122-24)
+- [OCI AI Foundations Course](https//mylearn.oracle.com/ou/course/oracle-cloud-infrastructure-ai-foundations/133832)
