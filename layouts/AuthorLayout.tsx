@@ -2,7 +2,8 @@ import { ReactNode } from 'react'
 import type { Authors } from 'contentlayer/generated'
 import SocialIcon from '@/components/social-icons'
 import Image from '@/components/Image'
-import ociCertImage from '/public/static/images/oci-genai-cert.png'
+import ociGenAICertImage from '/public/static/images/oci-genai-cert.png'
+import ociAIFoundCertImage from '/public/static/images/oci-ai-found-cert.png'
 import CustomImage from 'next/image'
 
 interface Props {
@@ -54,24 +55,46 @@ export default function AuthorLayout({ children, content }: Props) {
           <div className="gradient-light dark:gradient-dark text-center text-2xl font-semibold">
             Certifications
           </div>
-          <div className="flex flex-col items-center gap-4 py-4 md:flex-row">
-            <div className="overflow-hidden">
-              <CustomImage
-                src={ociCertImage}
-                alt="oci certified professional"
-                quality={100}
-                className="w-[180px] object-cover md:w-[200px] lg:w-[220px]"
-              />
+          <div className="flex flex-col items-center justify-center gap-8 py-4 lg:flex-row">
+            <div className="flex items-center">
+              <div className="overflow-hidden">
+                <CustomImage
+                  src={ociGenAICertImage}
+                  alt="oci certified professional"
+                  quality={100}
+                  className="w-[180px] object-cover md:w-[200px] lg:w-[220px]"
+                />
+              </div>
+              <div>
+                <a
+                  className="gradient-tr-light-clip dark:gradient-dark text-center text-lg font-semibold transition hover:opacity-80 hover:dark:opacity-80 md:text-xl"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=179260482E1DE470715A350A5907C72AF2B5E58E7581E466B17DFB9E3247B240"
+                >
+                  OCI Generative AI Professional - 1Z0-1127-24
+                </a>
+              </div>
             </div>
-            <div>
-              <a
-                className="gradient-tr-light-clip dark:gradient-dark text-center text-lg font-semibold transition hover:opacity-80 hover:dark:opacity-80 md:text-xl"
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=179260482E1DE470715A350A5907C72AF2B5E58E7581E466B17DFB9E3247B240"
-              >
-                Oracle Certified Generative AI Professional - 1Z0-1127-24
-              </a>
+            <div className="flex items-center">
+              <div className="overflow-hidden">
+                <CustomImage
+                  src={ociAIFoundCertImage}
+                  alt="oci certified professional"
+                  quality={100}
+                  className="w-[180px] object-cover md:w-[200px] lg:w-[220px]"
+                />
+              </div>
+              <div>
+                <a
+                  className="gradient-tr-light-clip dark:gradient-dark text-center text-lg font-semibold transition hover:opacity-80 hover:dark:opacity-80 md:text-xl"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=4BA6211937C90400E1DAD34E2EA2E8A78329DC4A60C78D9B8F9917DA62689F17"
+                >
+                  OCI AI Foundations Associate - 1Z0-1122-24
+                </a>
+              </div>
             </div>
           </div>
         </div>
