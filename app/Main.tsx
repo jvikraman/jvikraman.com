@@ -12,10 +12,10 @@ export default function Home({ posts }) {
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="space-y-2 pb-8 pt-6 md:space-y-5">
           <h1 className="gradient-light dark:gradient-dark py-2 text-3xl font-extrabold leading-9 tracking-tight sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-            Hi, I 'm Jegadeesh
+            Hi, I'm Jegadeesh
           </h1>
           <p className="prose text-lg leading-7 text-gray-600 dark:text-gray-300">
-            Welcome to my personal site. I 'm a Sr. Full Stack Engineer and I maintain this site to
+            Welcome to my personal site. I'm a Sr. Full Stack Engineer and I maintain this site to
             share my thoughts about technology and other interests. Checkout the{' '}
             <Link href={`/about`}>About</Link>
             {' section to read more about me.'}
