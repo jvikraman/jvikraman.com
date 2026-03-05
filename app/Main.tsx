@@ -10,8 +10,8 @@ export default function Home({ posts }) {
   return (
     <>
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
-        <div className="space-y-2 pb-8 pt-6 md:space-y-5">
-          <h1 className="gradient-light dark:gradient-dark py-2 text-3xl font-extrabold leading-9 tracking-tight sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+        <div className="space-y-2 pt-6 pb-8 md:space-y-5">
+          <h1 className="gradient-light dark:gradient-dark py-2 text-3xl leading-9 font-extrabold tracking-tight sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             Hi, I'm Jegadeesh
           </h1>
           <p className="prose text-lg leading-7 text-gray-600 dark:text-gray-300">
@@ -31,14 +31,14 @@ export default function Home({ posts }) {
                   <div className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
                     <dl>
                       <dt className="sr-only">Published on</dt>
-                      <dd className="text-base font-medium leading-6 text-gray-600 dark:text-gray-300">
+                      <dd className="text-base leading-6 font-medium text-gray-600 dark:text-gray-300">
                         <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
                       </dd>
                     </dl>
                     <div className="space-y-5 xl:col-span-3">
                       <div className="space-y-6">
                         <div>
-                          <h2 className="gradient-light dark:gradient-dark text-2xl font-bold leading-8 tracking-tight hover:opacity-90 hover:dark:opacity-90">
+                          <h2 className="gradient-light dark:gradient-dark text-2xl leading-8 font-bold tracking-tight hover:opacity-90 hover:dark:opacity-90">
                             <Link href={`/blog/${slug}`}>{title}</Link>
                           </h2>
                           <div className="flex flex-wrap">
@@ -51,7 +51,7 @@ export default function Home({ posts }) {
                           {summary}
                         </div>
                       </div>
-                      <div className="text-base font-medium leading-6">
+                      <div className="text-base leading-6 font-medium">
                         <Link
                           href={`/blog/${slug}`}
                           className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
@@ -69,7 +69,7 @@ export default function Home({ posts }) {
         </ul>
       </div>
       {posts.length > MAX_DISPLAY && (
-        <div className="flex justify-end text-base font-medium leading-6">
+        <div className="flex justify-end text-base leading-6 font-medium">
           <Link
             href="/blog"
             className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"

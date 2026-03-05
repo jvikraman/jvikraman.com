@@ -2,10 +2,10 @@ import { ReactNode } from 'react'
 import type { Authors } from 'contentlayer/generated'
 import SocialIcon from '@/components/social-icons'
 import Image from '@/components/Image'
-import ociGenAICertImage from '/public/static/images/oci-genai-clear.png'
-import ociAIFoundCertImage from '/public/static/images/oci-ai-found-clear.png'
-import awsAICert from '/public/static/images/aws-ai-cert-clear.png'
-import awsAIAdopter from '/public/static/images/aws-ai-early-adopter-clear.png'
+import ociGenAICertImage from '../public/static/images/oci-genai-clear.png'
+import ociAIFoundCertImage from '../public/static/images/oci-ai-found-clear.png'
+import awsAICert from '../public/static/images/aws-ai-cert-clear.png'
+import awsAIAdopter from '../public/static/images/aws-ai-early-adopter-clear.png'
 import CustomImage from 'next/image'
 
 interface Props {
@@ -19,8 +19,8 @@ export default function AuthorLayout({ children, content }: Props) {
   return (
     <>
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
-        <div className="space-y-2 pb-8 pt-6 md:space-y-5">
-          <h1 className="gradient-tr-light-clip dark:gradient-dark text-3xl font-extrabold leading-9 tracking-tight sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+        <div className="space-y-2 pt-6 pb-8 md:space-y-5">
+          <h1 className="gradient-tr-light-clip dark:gradient-dark text-3xl leading-9 font-extrabold tracking-tight sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             About
           </h1>
         </div>
@@ -37,7 +37,7 @@ export default function AuthorLayout({ children, content }: Props) {
                 />
               </div>
             )}
-            <h3 className="gradient-light dark:gradient-dark pb-2 pt-4 text-center text-2xl font-bold leading-8 tracking-tight">
+            <h3 className="gradient-light dark:gradient-dark pt-4 pb-2 text-center text-2xl leading-8 font-bold tracking-tight">
               {name}
             </h3>
             <div className="font-semibold text-gray-500 dark:text-gray-400">{occupation}</div>
@@ -49,7 +49,7 @@ export default function AuthorLayout({ children, content }: Props) {
               <SocialIcon kind="x" href={twitter} />
             </div>
           </div>
-          <div className="prose max-w-none pb-8 pt-8 text-lg dark:prose-invert xl:col-span-2">
+          <div className="prose dark:prose-invert max-w-none pt-8 pb-8 text-lg xl:col-span-2">
             {children}
           </div>
         </div>
@@ -69,7 +69,7 @@ export default function AuthorLayout({ children, content }: Props) {
               </div>
               <div className="hidden">
                 <a
-                  className="gradient-tr-light-clip dark:gradient-dark text-center text-lg font-semibold transition hover:opacity-80 hover:dark:opacity-80 md:text-xl"
+                  className="gradient-tr-light-clip dark:gradient-dark text-center text-lg font-semibold transition hover:opacity-80 md:text-xl hover:dark:opacity-80"
                   target="_blank"
                   rel="noopener noreferrer"
                   href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=179260482E1DE470715A350A5907C72AF2B5E58E7581E466B17DFB9E3247B240"
@@ -84,12 +84,12 @@ export default function AuthorLayout({ children, content }: Props) {
                   src={ociAIFoundCertImage}
                   alt="oci certified professional"
                   quality={100}
-                  className="w-[120px] object-cover "
+                  className="w-[120px] object-cover"
                 />
               </div>
               <div className="hidden">
                 <a
-                  className="gradient-tr-light-clip dark:gradient-dark text-center text-lg font-semibold transition hover:opacity-80 hover:dark:opacity-80 md:text-xl"
+                  className="gradient-tr-light-clip dark:gradient-dark text-center text-lg font-semibold transition hover:opacity-80 md:text-xl hover:dark:opacity-80"
                   target="_blank"
                   rel="noopener noreferrer"
                   href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=4BA6211937C90400E1DAD34E2EA2E8A78329DC4A60C78D9B8F9917DA62689F17"
@@ -104,12 +104,12 @@ export default function AuthorLayout({ children, content }: Props) {
                   src={awsAICert}
                   alt="aws certified ai practitioner"
                   quality={100}
-                  className="w-[120px] object-cover "
+                  className="w-[120px] object-cover"
                 />
               </div>
               <div className="hidden">
                 <a
-                  className="gradient-tr-light-clip dark:gradient-dark text-center text-lg font-semibold transition hover:opacity-80 hover:dark:opacity-80 md:text-xl"
+                  className="gradient-tr-light-clip dark:gradient-dark text-center text-lg font-semibold transition hover:opacity-80 md:text-xl hover:dark:opacity-80"
                   target="_blank"
                   rel="noopener noreferrer"
                   href="https://www.credly.com/badges/17d2cfae-7b65-4729-8814-0bc9f5b04b66/public_url"
@@ -124,12 +124,12 @@ export default function AuthorLayout({ children, content }: Props) {
                   src={awsAIAdopter}
                   alt="aws certified ai practitioner"
                   quality={100}
-                  className="w-[120px] object-cover "
+                  className="w-[120px] object-cover"
                 />
               </div>
               <div className="hidden">
                 <a
-                  className="gradient-tr-light-clip dark:gradient-dark text-center text-lg font-semibold transition hover:opacity-80 hover:dark:opacity-80 md:text-xl"
+                  className="gradient-tr-light-clip dark:gradient-dark text-center text-lg font-semibold transition hover:opacity-80 md:text-xl hover:dark:opacity-80"
                   target="_blank"
                   rel="noopener noreferrer"
                   href="https://www.credly.com/badges/18c8edc1-198c-422b-8d5b-104ecee87a43/public_url"
