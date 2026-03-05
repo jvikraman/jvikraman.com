@@ -46,3 +46,9 @@ yarn.lock
 
 # Contentlayer
 .contentlayer
+
+# TypeScript incremental build cache
+tsconfig.tsbuildinfo
+
+# Claude Code local config (machine-specific paths)
+.claude/

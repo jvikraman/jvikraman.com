@@ -1,6 +1,6 @@
 'use client'
 
-import { Dialog, Transition } from '@headlessui/react'
+import { Dialog, DialogPanel, Transition, TransitionChild } from '@headlessui/react'
 import { Fragment, useState } from 'react'
 import Link from './Link'
 import headerNavLinks from '@/data/headerNavLinks'
@@ -27,7 +27,7 @@ const MobileNav = () => {
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
           fill="currentColor"
-          className="h-8 w-8 text-gray-900 hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-400"
+          className="hover:text-primary-500 dark:hover:text-primary-400 h-8 w-8 text-gray-900 dark:text-gray-100"
         >
           <path
             fillRule="evenodd"
@@ -38,7 +38,7 @@ const MobileNav = () => {
       </button>
       <Transition appear show={navShow} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={onToggleNav}>
-          <Transition.Child
+          <TransitionChild
             as={Fragment}
             enter="ease-out duration-300"
             enterFrom="opacity-0"
@@ -48,11 +48,11 @@ const MobileNav = () => {
             leaveTo="opacity-0"
           >
             <div className="fixed inset-0 bg-black/25" />
-          </Transition.Child>
+          </TransitionChild>
 
           <div className="fixed inset-0 overflow-y-auto">
             <div className="flex min-h-full items-center justify-center p-4 text-center">
-              <Transition.Child
+              <TransitionChild
                 as={Fragment}
                 enter="transition ease-in-out duration-300 transform"
                 enterFrom="translate-x-full opacity-0"
@@ -61,13 +61,13 @@ const MobileNav = () => {
                 leaveFrom="translate-x-0 opacity-95"
                 leaveTo="translate-x-full opacity-0"
               >
-                <Dialog.Panel className="fixed left-0 top-0 z-10 h-full w-full bg-white opacity-95 duration-300 dark:bg-gray-950 dark:opacity-[0.98]">
+                <DialogPanel className="fixed top-0 left-0 z-10 h-full w-full bg-white opacity-95 duration-300 dark:bg-gray-950 dark:opacity-[0.98]">
                   <nav className="fixed mt-8 h-full text-left">
                     {headerNavLinks.map((link) => (
                       <div key={link.title} className="px-12 py-4">
                         <Link
                           href={link.href}
-                          className="text-2xl font-bold tracking-widest text-gray-900 hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-400"
+                          className="hover:text-primary-500 dark:hover:text-primary-400 text-2xl font-bold tracking-widest text-gray-900 dark:text-gray-100"
                           onClick={onToggleNav}
                         >
                           {link.title}
@@ -78,7 +78,7 @@ const MobileNav = () => {
 
                   <div className="flex justify-end">
                     <button
-                      className="mr-8 mt-11 h-8 w-8"
+                      className="mt-11 mr-8 h-8 w-8"
                       aria-label="Toggle Menu"
                       onClick={onToggleNav}
                     >
@@ -86,7 +86,7 @@ const MobileNav = () => {
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 20 20"
                         fill="currentColor"
-                        className="text-gray-900 hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-400"
+                        className="hover:text-primary-500 dark:hover:text-primary-400 text-gray-900 dark:text-gray-100"
                       >
                         <path
                           fillRule="evenodd"
@@ -96,8 +96,8 @@ const MobileNav = () => {
                       </svg>
                     </button>
                   </div>
-                </Dialog.Panel>
-              </Transition.Child>
+                </DialogPanel>
+              </TransitionChild>
             </div>
           </div>
         </Dialog>

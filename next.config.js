@@ -59,7 +59,7 @@ const basePath = process.env.BASE_PATH || undefined
 const unoptimized = process.env.UNOPTIMIZED ? true : undefined
 
 /**
- * @type {import('next/dist/next-server/server/config').NextConfig}
+ * @type {import('next').NextConfig}
  **/
 module.exports = () => {
   const plugins = [withContentlayer, withBundleAnalyzer]
@@ -68,9 +68,6 @@ module.exports = () => {
     basePath,
     reactStrictMode: true,
     pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
-    eslint: {
-      dirs: ['app', 'components', 'layouts', 'scripts'],
-    },
     images: {
       remotePatterns: [
         {
@@ -88,6 +85,17 @@ module.exports = () => {
         },
       ]
     },
+    // Turbopack config (default bundler in Next.js 16)
+    turbopack: {
+      root: __dirname,
+      rules: {
+        '*.svg': {
+          loaders: ['@svgr/webpack'],
+          as: '*.js',
+        },
+      },
+    },
+    // Keep webpack config for non-Turbopack builds (e.g. CI/analyze)
     webpack: (config, options) => {
       config.module.rules.push({
         test: /\.svg$/,
