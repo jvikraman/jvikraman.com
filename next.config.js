@@ -67,6 +67,8 @@ module.exports = () => {
     output,
     basePath,
     reactStrictMode: true,
+    // Next 16.3+ writes AGENTS.md & CLAUDE.md into the repo root on `next dev`; opt out.
+    agentRules: false,
     pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
     images: {
       remotePatterns: [
