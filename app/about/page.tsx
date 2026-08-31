@@ -1,6 +1,7 @@
 import { Authors, allAuthors } from 'contentlayer/generated'
 import { MDXLayoutRenderer } from 'pliny/mdx-components'
 import AuthorLayout from '@/layouts/AuthorLayout'
+import PageTransition from '@/components/PageTransition'
 import { coreContent } from 'pliny/utils/contentlayer'
 import { genPageMetadata } from 'app/seo'
 
@@ -11,10 +12,10 @@ export default function Page() {
   const mainContent = coreContent(author)
 
   return (
-    <>
+    <PageTransition>
       <AuthorLayout content={mainContent}>
         <MDXLayoutRenderer code={author.body.code} />
       </AuthorLayout>
-    </>
+    </PageTransition>
   )
 }

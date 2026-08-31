@@ -1,5 +1,6 @@
 'use client'
 
+import { ViewTransition } from 'react'
 import { usePathname } from 'next/navigation'
 import { slug } from 'github-slugger'
 import { formatDate } from 'pliny/utils/formatDate'
@@ -121,7 +122,7 @@ export default function ListLayoutWithTags({
           <div>
             <ul>
               {displayPosts.map((post) => {
-                const { path, date, title, summary, tags } = post
+                const { path, slug: postSlug, date, title, summary, tags } = post
                 return (
                   <li key={path} className="py-5">
                     <article className="flex flex-col space-y-2 xl:space-y-0">
@@ -134,12 +135,20 @@ export default function ListLayoutWithTags({
                       <div className="space-y-3">
                         <div>
                           <h2 className="text-2xl leading-8 font-bold tracking-tight">
-                            <Link
-                              href={`/${path}`}
-                              className="gradient-tr-light-clip dark:gradient-dark hover:opacity-90 dark:hover:opacity-90"
+                            {/* Morphs into the article header on the post page. */}
+                            <ViewTransition
+                              name={`post-title-${postSlug}`}
+                              share="morph"
+                              default="none"
                             >
-                              {title}
-                            </Link>
+                              <Link
+                                href={`/${path}`}
+                                transitionTypes={['nav-forward']}
+                                className="gradient-tr-light-clip dark:gradient-dark hover:opacity-90 dark:hover:opacity-90"
+                              >
+                                {title}
+                              </Link>
+                            </ViewTransition>
                           </h2>
                           <div className="flex flex-wrap">
                             {tags?.map((tag) => (
